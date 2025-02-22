@@ -66,13 +66,17 @@ _Эта утилита предназначена для загрузки фай
 
 
 `cd grafana_stack_for_docker`                _перемещает в директорию grafana_stack_for_docker, которая была создана при клонировании репозитория_
+
 `sudo mkdir -p /mnt/common_volume/swarm/grafana/config`           _создает директорию config по пути /mnt/common_volume/swarm/grafana/_
+
 `sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data}`            _создает три директории: grafana-config, grafana-data и prometheus-data в директории /mnt/common_volume/grafana/_
+
 
 ![image](https://github.com/user-attachments/assets/9e69d355-2b70-4463-85ac-e4f33996975f)
 
 
 `sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`          _изменяет владельца и группу для всех файлов и директорий_
+
 `touch /mnt/common_volume/grafana/grafana-config/grafana.ini`                       _создает пустой файл с именем grafana.ini_
 
 ![image](https://github.com/user-attachments/assets/64ed4c57-2203-4c37-9ab7-5760c7c8e287)
@@ -86,6 +90,7 @@ _Эта утилита предназначена для загрузки фай
 ![image](https://github.com/user-attachments/assets/478111d4-870b-400d-b2b8-2fa2d163ea90)
 
 `sudo docker compose up -d`
+
          _Docker Compose создаст и запустит все контейнеры, указанные в файле docker-compose.yaml, в фоновом режиме._
 
 
@@ -96,9 +101,13 @@ _Эта утилита предназначена для загрузки фай
 
 
 `ls`         используется для просмотра содержимого директории
+
 `Cd grafana_stack_for_docker/`           _изменяет текущую директорию на grafana_stack_for_docker_
+
 `Ls`          _снова отображает список файлов и директорий, но теперь уже в директории grafana_stack_for_docker_
+
 `vi docker-compose.yaml`         _открывает файл docker-compose.yaml в текстовом редакторе vi_
+
 
 ![image](https://github.com/user-attachments/assets/3bf080f5-0832-4dcb-ab6d-9f0768bc8743)
 
