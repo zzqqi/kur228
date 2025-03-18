@@ -130,3 +130,20 @@ _Эта утилита предназначена для загрузки фай
 `sudo docker-compose ps`        _отображает список контейнеров, которые управляются Docker Compose, и их текущее состояние_
 
 ![image](https://github.com/user-attachments/assets/98111f50-2bf6-4585-9c9d-542beb9d7195)
+
+переход в папку cd grafana_stack_for_docker и выполнение комнады sudo git clone https://github.com/zzqqi/kur228.git
+
+![image](https://github.com/user-attachments/assets/df98a2dd-5e73-4d7a-a894-ee811fdb3043)
+
+sudo cp docker-compose.yaml docker-compose.yaml1
+![image](https://github.com/user-attachments/assets/ce2bb7c7-99e9-4007-be20-b12bd96c496e)
+
+cd /mnt/common_volume/swarm/grafana/config
+sudo cp prometheus.yaml prometheus.yaml1
+![image](https://github.com/user-attachments/assets/cb395b51-8f76-417b-9fda-1ebbf9f76053)
+
+sudo docker-compose down и sudo docker-compose up -d
+![image](https://github.com/user-attachments/assets/52c49b1c-8a7c-4cce-bff3-38df7ec807db)
+
+![image](https://github.com/user-attachments/assets/29dca7c7-cc15-494b-a9af-95cb5cb1a102)
+
