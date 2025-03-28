@@ -145,5 +145,29 @@ sudo cp prometheus.yaml prometheus.yaml1
 sudo docker-compose down и sudo docker-compose up -d
 ![image](https://github.com/user-attachments/assets/52c49b1c-8a7c-4cce-bff3-38df7ec807db)
 
+sudo vi prometheus.yaml
 ![image](https://github.com/user-attachments/assets/29dca7c7-cc15-494b-a9af-95cb5cb1a102)
+Снова запускаем контейнеры sudo docker-compose up -d
+и заходим на 
+Grafana
 
+переходим на сайт localhost:3000
+
+User & Password GRAFANA: admin
+
+После того как зашли, нужно создать Dashboards.
+
+Home -> Connections -> Data sources -> Add data source
+
+После нажимаем +Add visualization -> Configure a new data source -> Prometheus
+
+Настройки прометеуса:
+
+http://prometheus:9090 Authentication: Basic authentication Save & test
+
+Cоздав Dashboards импортируем его: Home -> Dashboards -> Import dashboard
+
+Далее
+
+1860 -> Load Select Prometheus -> Import -> Название Prometheus
+![image](https://github.com/user-attachments/assets/7990508b-d662-41ec-b90c-1d7e8ddf19cb)
