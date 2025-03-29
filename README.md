@@ -166,8 +166,21 @@ Home -> Connections -> Data sources -> Add data source
 http://prometheus:9090 Authentication: Basic authentication Save & test
 
 Cоздав Dashboards импортируем его: Home -> Dashboards -> Import dashboard
-
 Далее
-
 1860 -> Load Select Prometheus -> Import -> Название Prometheus
 ![image](https://github.com/user-attachments/assets/7990508b-d662-41ec-b90c-1d7e8ddf19cb)
+
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+![image](https://github.com/user-attachments/assets/d3a3651c-30b4-4bf0-a260-50067243a66b)
+
+![image](https://github.com/user-attachments/assets/68f48411-d928-404e-88d2-445df9ee1cb7)
+
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 565" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+![image](https://github.com/user-attachments/assets/9ffc7312-26fe-409e-9663-82d40377dd87)
+
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 282" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+![image](https://github.com/user-attachments/assets/d1c920a5-3de8-4f7f-a86e-e31ce08e6008)
+
+Connect null values --> always
+![image](https://github.com/user-attachments/assets/a8f2c14f-d500-48e3-875c-f4b05dbc0972)
+
